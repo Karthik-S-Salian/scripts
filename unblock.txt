@@ -1,0 +1,1 @@
+dir *.ps1 -Recurse | unblock-file
