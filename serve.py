@@ -23,9 +23,7 @@ class CustomRequestHandler(http.server.SimpleHTTPRequestHandler):
 
 if __name__=="__main__":
 
-    path = " ".join(sys.argv[1:])
-    print("args  ->", sys.argv)
-    print("path   ->",path)
+    path = sys.argv[1]
     os.chdir(path)
 
     with socketserver.TCPServer(("", port), CustomRequestHandler) as httpd:
